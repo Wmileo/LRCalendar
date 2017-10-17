@@ -18,7 +18,7 @@
 		B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723D91F95F4E1008AB181 /* LRCWeekView.m */; };
 		B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */; };
 		B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */; };
-		B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDayView.m */; };
+		B3D723E31F95FD31008AB181 /* LRCDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCMonthView.m; sourceTree = "<group>"; };
 		B3D723DE1F95F57A008AB181 /* LRCalendarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCalendarTool.h; sourceTree = "<group>"; };
 		B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCalendarTool.m; sourceTree = "<group>"; };
-		B3D723E11F95FD31008AB181 /* LRCDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCDayView.h; sourceTree = "<group>"; };
-		B3D723E21F95FD31008AB181 /* LRCDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDayView.m; sourceTree = "<group>"; };
+		B3D723E11F95FD31008AB181 /* LRCDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCDateView.h; sourceTree = "<group>"; };
+		B3D723E21F95FD31008AB181 /* LRCDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 		B3D723D41F95F323008AB181 /* LRCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				B3D723E11F95FD31008AB181 /* LRCDayView.h */,
-				B3D723E21F95FD31008AB181 /* LRCDayView.m */,
+				B3D723E11F95FD31008AB181 /* LRCDateView.h */,
+				B3D723E21F95FD31008AB181 /* LRCDateView.m */,
 				B3D723D81F95F4E1008AB181 /* LRCWeekView.h */,
 				B3D723D91F95F4E1008AB181 /* LRCWeekView.m */,
 				B3D723DB1F95F4F7008AB181 /* LRCMonthView.h */,
@@ -307,7 +307,7 @@
 				B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */,
 				B3D723A51F94E2CE008AB181 /* ViewController.m in Sources */,
 				B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */,
-				B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */,
+				B3D723E31F95FD31008AB181 /* LRCDateView.m in Sources */,
 				B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */,
 				B3D723A21F94E2CE008AB181 /* AppDelegate.m in Sources */,
 				B3D7239F1F94E2CE008AB181 /* main.m in Sources */,

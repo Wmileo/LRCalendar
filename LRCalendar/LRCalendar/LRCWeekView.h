@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRCDateView.h"
+
+@class LRCWeekView;
+
+@protocol LRCWeekViewDataSource <NSObject>
+
+-(LRCDateView *)lrcDateViewWithDateComponents:(NSDateComponents *)dateComponents inWeekView:(LRCWeekView *)weekView;
+
+@end
 
 @interface LRCWeekView : UIView
+
+@property (nonatomic, weak) id<LRCWeekViewDataSource> dataSource;
+
+@property (nonatomic, strong) NSDate *monthFirstDate;
+@property (nonatomic, strong) NSDate *firstDate;
+
+-(void)reloadData;
 
 @end

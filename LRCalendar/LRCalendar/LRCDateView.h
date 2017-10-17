@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LRCDayView : UIView
+@interface LRCDateView : UIView
 
 @property (nonatomic, strong) NSDateComponents *dateComponents;
 @property (nonatomic, copy) void (^Click)(NSDateComponents *dateComponents);
