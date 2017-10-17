@@ -15,6 +15,10 @@
 		B3D723AD1F94E2CE008AB181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D723AB1F94E2CE008AB181 /* LaunchScreen.storyboard */; };
 		B3D723B81F94E2CE008AB181 /* LRCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723B71F94E2CE008AB181 /* LRCalendarTests.m */; };
 		B3D723C31F94E2CE008AB181 /* LRCalendarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723C21F94E2CE008AB181 /* LRCalendarUITests.m */; };
+		B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723D91F95F4E1008AB181 /* LRCWeekView.m */; };
+		B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */; };
+		B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */; };
+		B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		B3D723BE1F94E2CE008AB181 /* LRCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D723C21F94E2CE008AB181 /* LRCalendarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRCalendarUITests.m; sourceTree = "<group>"; };
 		B3D723C41F94E2CE008AB181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D723D81F95F4E1008AB181 /* LRCWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCWeekView.h; sourceTree = "<group>"; };
+		B3D723D91F95F4E1008AB181 /* LRCWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCWeekView.m; sourceTree = "<group>"; };
+		B3D723DB1F95F4F7008AB181 /* LRCMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCMonthView.h; sourceTree = "<group>"; };
+		B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCMonthView.m; sourceTree = "<group>"; };
+		B3D723DE1F95F57A008AB181 /* LRCalendarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCalendarTool.h; sourceTree = "<group>"; };
+		B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCalendarTool.m; sourceTree = "<group>"; };
+		B3D723E11F95FD31008AB181 /* LRCDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCDayView.h; sourceTree = "<group>"; };
+		B3D723E21F95FD31008AB181 /* LRCDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 				B3D723A31F94E2CE008AB181 /* ViewController.h */,
 				B3D723A41F94E2CE008AB181 /* ViewController.m */,
 				B3D723A61F94E2CE008AB181 /* Main.storyboard */,
+				B3D723D41F95F323008AB181 /* LRCalendar */,
 				B3D723A91F94E2CE008AB181 /* Assets.xcassets */,
 				B3D723AB1F94E2CE008AB181 /* LaunchScreen.storyboard */,
 				B3D723AE1F94E2CE008AB181 /* Info.plist */,
@@ -138,6 +151,21 @@
 				B3D723C41F94E2CE008AB181 /* Info.plist */,
 			);
 			path = LRCalendarUITests;
+			sourceTree = "<group>";
+		};
+		B3D723D41F95F323008AB181 /* LRCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				B3D723E11F95FD31008AB181 /* LRCDayView.h */,
+				B3D723E21F95FD31008AB181 /* LRCDayView.m */,
+				B3D723D81F95F4E1008AB181 /* LRCWeekView.h */,
+				B3D723D91F95F4E1008AB181 /* LRCWeekView.m */,
+				B3D723DB1F95F4F7008AB181 /* LRCMonthView.h */,
+				B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */,
+				B3D723DE1F95F57A008AB181 /* LRCalendarTool.h */,
+				B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */,
+			);
+			path = LRCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */,
 				B3D723A51F94E2CE008AB181 /* ViewController.m in Sources */,
+				B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */,
+				B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */,
+				B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */,
 				B3D723A21F94E2CE008AB181 /* AppDelegate.m in Sources */,
 				B3D7239F1F94E2CE008AB181 /* main.m in Sources */,
 			);
@@ -518,6 +550,7 @@
 				B3D723C91F94E2CE008AB181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D723CA1F94E2CE008AB181 /* Build configuration list for PBXNativeTarget "LRCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +559,7 @@
 				B3D723CC1F94E2CE008AB181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D723CD1F94E2CE008AB181 /* Build configuration list for PBXNativeTarget "LRCalendarUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +568,7 @@
 				B3D723CF1F94E2CE008AB181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
