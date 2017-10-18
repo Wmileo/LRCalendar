@@ -13,7 +13,7 @@
 
 @protocol LRCWeekViewDataSource <NSObject>
 
--(LRCDateView *)lrcDateViewWithDateComponents:(NSDateComponents *)dateComponents inWeekView:(LRCWeekView *)weekView;
+-(LRCDateView *)lrcDateViewWithDateComponents:(NSDateComponents *)dateComponents inWeekView:(LRCWeekView *)weekView reuseDateView:(LRCDateView *)dateView;
 
 @end
 

@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSDateComponents *dateComponents;
 @property (nonatomic, copy) void (^Click)(NSDateComponents *dateComponents);
 
+@property (nonatomic, strong) UILabel *label;
+
 @end
