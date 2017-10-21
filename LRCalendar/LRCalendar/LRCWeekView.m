@@ -18,7 +18,7 @@
 @implementation LRCWeekView
 
 -(void)reloadData{
-    if (self.dataSource && self.firstDate && self.monthFirstDate) {
+    if (self.delegate && self.firstDate && self.monthFirstDate) {
         CGFloat width = self.frame.size.width / 7;
         CGFloat height = self.frame.size.height;
         NSInteger max = 7;
@@ -26,7 +26,12 @@
             NSDateComponents *components = [LRCalendarTool dateComponentsWithDate:[LRCalendarTool dateFromDate:self.firstDate afterDays:i]];
             LRCDateView *reuse = self.dateViews[@(i)];
             [reuse removeFromSuperview];
-            LRCDateView *dateView = [self.dataSource lrcDateViewWithDateComponents:components inWeekView:self reuseDateView:reuse];
+            LRCDateView *dateView = [self.delegate lrcDateViewWithDateComponents:components inWeekView:self reuseDateView:reuse];
+            __weak LRCDateView *wDateView = dateView;
+            dateView.Click = ^(NSDateComponents *dateComponents) {
+                __strong LRCDateView *sDateView = wDateView;
+                [self.delegate lrcClickDateView:sDateView withWeekView:self];
+            };
             if (dateView) {
                 dateView.frame = CGRectMake(width * i, 0, width - 1, height);
                 self.dateViews[@(i)] = dateView;

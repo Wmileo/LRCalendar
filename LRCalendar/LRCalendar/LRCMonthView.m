@@ -22,7 +22,7 @@
 -(void)reloadData{
     if (self.delegate && self.firstDate) {
         [self.headerView removeFromSuperview];
-        UIView *headerView = [self.dataSource lrcHeaderViewWithMonthView:self reuseView:self.headerView];
+        UIView *headerView = [self.delegate lrcHeaderViewWithMonthView:self reuseView:self.headerView];
         CGFloat top = 0;
         if (headerView) {
             headerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(headerView.frame));
@@ -31,7 +31,7 @@
             top += CGRectGetHeight(headerView.frame);
         }
         NSInteger wnum = self.weekNum;
-        CGFloat height = [self.dataSource lrcWeekViewHeightWithMonthView:self];
+        CGFloat height = [self.delegate lrcWeekViewHeightWithMonthView:self];
         for (UIView *view in self.weekViews) {
             [view removeFromSuperview];
         }
@@ -39,7 +39,7 @@
             LRCWeekView *reuse = self.weekViews[@(i)];
             if (!reuse) {
                 reuse = [[LRCWeekView alloc] init];
-                reuse.dataSource = self.dataSource;
+                reuse.delegate = self.delegate;
                 self.weekViews[@(i)] = reuse;
             }
             reuse.frame = CGRectMake(0, top, CGRectGetWidth(self.frame), height);
@@ -65,8 +65,8 @@
 }
 
 -(CGFloat)totalHeight{
-    CGFloat height = self.weekNum * [self.dataSource lrcWeekViewHeightWithMonthView:self];
-    UIView *headerView = [self.dataSource lrcHeaderViewWithMonthView:self reuseView:self.headerView];
+    CGFloat height = self.weekNum * [self.delegate lrcWeekViewHeightWithMonthView:self];
+    UIView *headerView = [self.delegate lrcHeaderViewWithMonthView:self reuseView:self.headerView];
     if (headerView) {
         self.headerView = headerView;
         height += headerView.frame.size.height;

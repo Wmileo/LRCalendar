@@ -11,7 +11,9 @@
 
 @class LRCWeekView;
 
-@protocol LRCWeekViewDataSource <NSObject>
+@protocol LRCWeekViewDelegate <NSObject>
+
+-(void)lrcClickDateView:(LRCDateView *)dateView withWeekView:(LRCWeekView *)weekView;
 
 -(LRCDateView *)lrcDateViewWithDateComponents:(NSDateComponents *)dateComponents inWeekView:(LRCWeekView *)weekView reuseDateView:(LRCDateView *)dateView;
 
@@ -19,7 +21,7 @@
 
 @interface LRCWeekView : UIView
 
-@property (nonatomic, weak) id<LRCWeekViewDataSource> dataSource;
+@property (nonatomic, weak) id<LRCWeekViewDelegate> delegate;
 
 @property (nonatomic, strong) NSDate *monthFirstDate;
 @property (nonatomic, strong) NSDate *firstDate;

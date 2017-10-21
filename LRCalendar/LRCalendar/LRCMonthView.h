@@ -12,13 +12,7 @@
 
 @class LRCMonthView;
 
-@protocol LRCMonthViewDelegate <NSObject>
-
--(void)lrcClickDateView:(LRCDateView *)dateView withMonthView:(LRCMonthView *)monthView;
-
-@end
-
-@protocol LRCMonthViewDataSource <LRCWeekViewDataSource>
+@protocol LRCMonthViewDelegate <LRCWeekViewDelegate>
 
 -(CGFloat)lrcWeekViewHeightWithMonthView:(LRCMonthView *)monthView;
 -(UIView *)lrcHeaderViewWithMonthView:(LRCMonthView *)monthView reuseView:(UIView *)view;
@@ -28,7 +22,6 @@
 @interface LRCMonthView : UIView
 
 @property (nonatomic, weak) id<LRCMonthViewDelegate> delegate;
-@property (nonatomic, weak) id<LRCMonthViewDataSource> dataSource;
 
 @property (nonatomic, strong) NSDate *firstDate;
 
