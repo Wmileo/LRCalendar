@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B37DE7F0001325B9D0BE44CD /* libPods-LRCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AB74477F6FB0D2D563530E /* libPods-LRCalendar.a */; };
 		B3D7239F1F94E2CE008AB181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D7239E1F94E2CE008AB181 /* main.m */; };
 		B3D723A21F94E2CE008AB181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723A11F94E2CE008AB181 /* AppDelegate.m */; };
 		B3D723A51F94E2CE008AB181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723A41F94E2CE008AB181 /* ViewController.m */; };
@@ -18,7 +19,8 @@
 		B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723D91F95F4E1008AB181 /* LRCWeekView.m */; };
 		B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */; };
 		B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */; };
-		B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDayView.m */; };
+		B3D723E31F95FD31008AB181 /* LRCDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDateView.m */; };
+		B3F0B7611F99F5A500C83EB2 /* LRCWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F0B7601F99F5A500C83EB2 /* LRCWeekTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C3C2100E0BCFF61E757FA17 /* Pods-LRCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LRCalendar/Pods-LRCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		5EDC45550D619307087812D4 /* Pods-LRCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LRCalendar/Pods-LRCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		77AB74477F6FB0D2D563530E /* libPods-LRCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LRCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D7239A1F94E2CE008AB181 /* LRCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D7239E1F94E2CE008AB181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3D723A01F94E2CE008AB181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,8 +66,10 @@
 		B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCMonthView.m; sourceTree = "<group>"; };
 		B3D723DE1F95F57A008AB181 /* LRCalendarTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCalendarTool.h; sourceTree = "<group>"; };
 		B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCalendarTool.m; sourceTree = "<group>"; };
-		B3D723E11F95FD31008AB181 /* LRCDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCDayView.h; sourceTree = "<group>"; };
-		B3D723E21F95FD31008AB181 /* LRCDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDayView.m; sourceTree = "<group>"; };
+		B3D723E11F95FD31008AB181 /* LRCDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCDateView.h; sourceTree = "<group>"; };
+		B3D723E21F95FD31008AB181 /* LRCDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDateView.m; sourceTree = "<group>"; };
+		B3F0B75F1F99F5A500C83EB2 /* LRCWeekTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCWeekTitleView.h; sourceTree = "<group>"; };
+		B3F0B7601F99F5A500C83EB2 /* LRCWeekTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCWeekTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37DE7F0001325B9D0BE44CD /* libPods-LRCalendar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4497B3F0C30BF33CF93148 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C2100E0BCFF61E757FA17 /* Pods-LRCalendar.debug.xcconfig */,
+				5EDC45550D619307087812D4 /* Pods-LRCalendar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B3D723911F94E2CD008AB181 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,8 @@
 				B3D723B61F94E2CE008AB181 /* LRCalendarTests */,
 				B3D723C11F94E2CE008AB181 /* LRCalendarUITests */,
 				B3D7239B1F94E2CE008AB181 /* Products */,
+				0A4497B3F0C30BF33CF93148 /* Pods */,
+				FDF1373D0B831DCFEC156441 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,16 +175,26 @@
 		B3D723D41F95F323008AB181 /* LRCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				B3D723E11F95FD31008AB181 /* LRCDayView.h */,
-				B3D723E21F95FD31008AB181 /* LRCDayView.m */,
+				B3D723E11F95FD31008AB181 /* LRCDateView.h */,
+				B3D723E21F95FD31008AB181 /* LRCDateView.m */,
 				B3D723D81F95F4E1008AB181 /* LRCWeekView.h */,
 				B3D723D91F95F4E1008AB181 /* LRCWeekView.m */,
+				B3F0B75F1F99F5A500C83EB2 /* LRCWeekTitleView.h */,
+				B3F0B7601F99F5A500C83EB2 /* LRCWeekTitleView.m */,
 				B3D723DB1F95F4F7008AB181 /* LRCMonthView.h */,
 				B3D723DC1F95F4F7008AB181 /* LRCMonthView.m */,
 				B3D723DE1F95F57A008AB181 /* LRCalendarTool.h */,
 				B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */,
 			);
 			path = LRCalendar;
+			sourceTree = "<group>";
+		};
+		FDF1373D0B831DCFEC156441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77AB74477F6FB0D2D563530E /* libPods-LRCalendar.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3D723C71F94E2CE008AB181 /* Build configuration list for PBXNativeTarget "LRCalendar" */;
 			buildPhases = (
+				9A6243BB3489ED6911877703 /* [CP] Check Pods Manifest.lock */,
 				B3D723961F94E2CE008AB181 /* Sources */,
 				B3D723971F94E2CE008AB181 /* Frameworks */,
 				B3D723981F94E2CE008AB181 /* Resources */,
+				3E30E41FE726D0A92D677206 /* [CP] Embed Pods Frameworks */,
+				6E77E1DB77C54553BB884A74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,6 +331,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E30E41FE726D0A92D677206 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRCalendar/Pods-LRCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E77E1DB77C54553BB884A74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRCalendar/Pods-LRCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A6243BB3489ED6911877703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LRCalendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3D723961F94E2CE008AB181 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -307,10 +390,11 @@
 				B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */,
 				B3D723A51F94E2CE008AB181 /* ViewController.m in Sources */,
 				B3D723DD1F95F4F7008AB181 /* LRCMonthView.m in Sources */,
-				B3D723E31F95FD31008AB181 /* LRCDayView.m in Sources */,
+				B3D723E31F95FD31008AB181 /* LRCDateView.m in Sources */,
 				B3D723DA1F95F4E1008AB181 /* LRCWeekView.m in Sources */,
 				B3D723A21F94E2CE008AB181 /* AppDelegate.m in Sources */,
 				B3D7239F1F94E2CE008AB181 /* main.m in Sources */,
+				B3F0B7611F99F5A500C83EB2 /* LRCWeekTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +543,7 @@
 		};
 		B3D723C81F94E2CE008AB181 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3C2100E0BCFF61E757FA17 /* Pods-LRCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9J6JH9B3QM;
@@ -471,6 +556,7 @@
 		};
 		B3D723C91F94E2CE008AB181 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EDC45550D619307087812D4 /* Pods-LRCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9J6JH9B3QM;

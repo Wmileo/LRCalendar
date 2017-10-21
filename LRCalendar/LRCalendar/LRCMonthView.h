@@ -7,7 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRCDateView.h"
+#import "LRCWeekView.h"
+
+@class LRCMonthView;
+
+@protocol LRCMonthViewDelegate <LRCWeekViewDelegate>
+
+-(CGFloat)lrcWeekViewHeightWithMonthView:(LRCMonthView *)monthView;
+-(UIView *)lrcHeaderViewWithMonthView:(LRCMonthView *)monthView reuseView:(UIView *)view;
+
+@end
 
 @interface LRCMonthView : UIView
+
+@property (nonatomic, weak) id<LRCMonthViewDelegate> delegate;
+
+@property (nonatomic, strong) NSDate *firstDate;
+
+@property (nonatomic, readonly) NSInteger weekNum;
+@property (nonatomic, readonly) NSDateComponents *firstDateComponents;
+
+@property (nonatomic, readonly) CGFloat totalHeight;
+-(void)reloadData;
 
 @end
