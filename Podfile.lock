@@ -1,15 +1,15 @@
 PODS:
-  - LoadController (2.0.1)
+  - LoadController (1.0.10)
   - Reveal-iOS-SDK (1.6.2)
 
 DEPENDENCIES:
-  - LoadController
+  - LoadController (= 1.0.10)
   - Reveal-iOS-SDK
 
 SPEC CHECKSUMS:
-  LoadController: 9052913b22b20681fa4430e45a8faa08bc50689e
+  LoadController: 1320db45038a8f00e83f9cf8377e46cbe74ff5a5
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
 
-PODFILE CHECKSUM: 138ae5197de760690316513ac2baee1c26e5259a
+PODFILE CHECKSUM: 851358149fd04bdae0643dfa1cbddbcc1e7a82aa
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0.beta.1
