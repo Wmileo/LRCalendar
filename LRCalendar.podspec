@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "LRCalendar"
   s.description  = <<-DESC
-					 可自定义日历
+		        			 可自定义日历
                    DESC
 
   s.homepage     = "https://github.com/Wmileo/LRCalendar"
