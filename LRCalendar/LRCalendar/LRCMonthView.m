@@ -32,7 +32,7 @@
         }
         NSInteger wnum = self.weekNum;
         CGFloat height = [self.delegate lrcWeekViewHeightWithMonthView:self];
-        for (UIView *view in self.weekViews) {
+        for (UIView *view in [self.weekViews allValues]) {
             [view removeFromSuperview];
         }
         for (NSInteger i = 0 ; i < wnum; i++) {
