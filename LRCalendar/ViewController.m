@@ -10,8 +10,14 @@
 #import "LRCMonthView.h"
 #import "LRCalendarTool.h"
 #import "LRCWeekTitleView.h"
+#import <UIScrollView+Load.h>
 
-@interface ViewController () <LRCMonthViewDelegate, LRCMonthViewDelegate, LRCWeekTitleViewDataSource>
+@interface ViewController () <LRCMonthViewDelegate, LRCMonthViewDelegate, LRCWeekTitleViewDataSource, UITableViewDelegate, UITableViewDataSource, LoadControllerDelegate>
+
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *firDates;
 
 @end
 
@@ -20,16 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
-    monthView.firstDate = [LRCalendarTool firstDateInMonthForDate:[LRCalendarTool dateFromDate:[NSDate date] beforeDays:18]];
-    monthView.delegate = self;
-    [self.view addSubview:monthView];
-    [monthView reloadData];
+    self.firDates = @[[LRCalendarTool firstDateInMonthForDate:[NSDate date]]];
     
     LRCWeekTitleView *titleView = [[LRCWeekTitleView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 50)];
     titleView.dataSource = self;
     [self.view addSubview:titleView];
     [titleView reloadData];
+    
+    [self.view addSubview:self.tableView];
+
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -75,6 +81,98 @@
 
 -(NSArray *)days{
     return @[@"周日", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六"];
+}
+
+#pragma mark -
+
+-(void)loadTopFinish:(void (^)(CGFloat))finish withScrollView:(UIScrollView *)scrollView{
+    
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:self.firDates];
+    NSDate *date = [LRCalendarTool firstDateInLastMonthForDate:self.firDates.firstObject];
+    [arr insertObject:date atIndex:0];
+    self.firDates = arr;
+    LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
+    monthView.delegate = self;
+    monthView.firstDate = date;
+    [self.tableView reloadData];
+
+    finish(monthView.totalHeight + 50);
+
+}
+
+-(void)loadBottomFinish:(void (^)())finish withScrollView:(UIScrollView *)scrollView{
+    
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:self.firDates];
+    NSDate *date = [LRCalendarTool firstDateInNextMonthForDate:self.firDates.lastObject];
+    [arr addObject:date];
+    self.firDates = arr;
+    LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
+    monthView.delegate = self;
+    monthView.firstDate = date;
+    [self.tableView reloadData];
+
+    finish();
+
+}
+
+#pragma mark - tableview delegate
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.firDates.count;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
+    monthView.delegate = self;
+    monthView.firstDate = self.firDates[indexPath.row];
+    return monthView.totalHeight + 50;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellID = @"id";
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
+        monthView.delegate = self;
+        monthView.tag = 100;
+        [cell addSubview:monthView];
+    }
+    LRCMonthView *monthView = [cell viewWithTag:100];
+    monthView.firstDate = self.firDates[indexPath.row];
+    [monthView reloadData];
+    
+    return cell;
+}
+
+#pragma mark - set get
+
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 50)];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+//        _tableView.estimatedRowHeight = 80.0f;
+//        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.loadTopView = [self aloadView];
+        _tableView.loadBottomView = [self aloadView];
+        _tableView.loadDelegate = self;
+
+    }
+    return _tableView;
+    
+}
+
+-(LoadView *)aloadView{
+    LoadView *view = [[LoadView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+    view.canAutoLoad = YES;
+    view.recoverDelay = 0;
+    view.recoverDuration = 0;
+    return view;
 }
 
 @end

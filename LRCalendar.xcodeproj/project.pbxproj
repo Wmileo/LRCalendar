@@ -21,6 +21,7 @@
 		B3D723E01F95F57A008AB181 /* LRCalendarTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723DF1F95F57A008AB181 /* LRCalendarTool.m */; };
 		B3D723E31F95FD31008AB181 /* LRCDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D723E21F95FD31008AB181 /* LRCDateView.m */; };
 		B3F0B7611F99F5A500C83EB2 /* LRCWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F0B7601F99F5A500C83EB2 /* LRCWeekTitleView.m */; };
+		CEF69D361FA5A4320094BAE5 /* LRCalendar.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF69D351FA5A4320094BAE5 /* LRCalendar.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B3D723E21F95FD31008AB181 /* LRCDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCDateView.m; sourceTree = "<group>"; };
 		B3F0B75F1F99F5A500C83EB2 /* LRCWeekTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCWeekTitleView.h; sourceTree = "<group>"; };
 		B3F0B7601F99F5A500C83EB2 /* LRCWeekTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCWeekTitleView.m; sourceTree = "<group>"; };
+		CEF69D351FA5A4320094BAE5 /* LRCalendar.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LRCalendar.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		B3D723911F94E2CD008AB181 = {
 			isa = PBXGroup;
 			children = (
+				CEF69D351FA5A4320094BAE5 /* LRCalendar.podspec */,
 				B3D7239C1F94E2CE008AB181 /* LRCalendar */,
 				B3D723B61F94E2CE008AB181 /* LRCalendarTests */,
 				B3D723C11F94E2CE008AB181 /* LRCalendarUITests */,
@@ -267,7 +270,7 @@
 				TargetAttributes = {
 					B3D723991F94E2CE008AB181 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9J6JH9B3QM;
+						DevelopmentTeam = 9MDFP7US47;
 						ProvisioningStyle = Automatic;
 					};
 					B3D723B21F94E2CE008AB181 = {
@@ -311,6 +314,7 @@
 			files = (
 				B3D723AD1F94E2CE008AB181 /* LaunchScreen.storyboard in Resources */,
 				B3D723AA1F94E2CE008AB181 /* Assets.xcassets in Resources */,
+				CEF69D361FA5A4320094BAE5 /* LRCalendar.podspec in Resources */,
 				B3D723A81F94E2CE008AB181 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +550,7 @@
 			baseConfigurationReference = 2C3C2100E0BCFF61E757FA17 /* Pods-LRCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9J6JH9B3QM;
+				DEVELOPMENT_TEAM = 9MDFP7US47;
 				INFOPLIST_FILE = LRCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leospace.LRCalendar;
@@ -559,7 +563,7 @@
 			baseConfigurationReference = 5EDC45550D619307087812D4 /* Pods-LRCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9J6JH9B3QM;
+				DEVELOPMENT_TEAM = 9MDFP7US47;
 				INFOPLIST_FILE = LRCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leospace.LRCalendar;
