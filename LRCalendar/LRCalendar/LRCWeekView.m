@@ -23,10 +23,12 @@
         CGFloat height = self.frame.size.height;
         NSInteger max = 7;
         for (int i = 0; i < max; i++) {
-            NSDateComponents *components = [LRCalendarTool dateComponentsWithDate:[LRCalendarTool dateFromDate:self.firstDate afterDays:i]];
+            NSDate *date = [LRCalendarTool dateFromDate:self.firstDate afterDays:i];
+            NSDateComponents *components = [LRCalendarTool dateComponentsWithDate:date];
             LRCDateView *reuse = self.dateViews[@(i)];
             [reuse removeFromSuperview];
             LRCDateView *dateView = [self.delegate lrcDateViewWithDateComponents:components inWeekView:self reuseDateView:reuse];
+            dateView.date = date;
             __weak LRCDateView *wDateView = dateView;
             dateView.Click = ^(NSDateComponents *dateComponents) {
                 __strong LRCDateView *sDateView = wDateView;

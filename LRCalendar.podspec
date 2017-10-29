@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name         = "LRCalendar"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "LRCalendar"
   s.description  = <<-DESC
 		        			 可自定义日历
