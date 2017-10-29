@@ -95,6 +95,7 @@
     monthView.delegate = self;
     monthView.firstDate = date;
     [self.tableView reloadData];
+    NSLog(@"top%f",monthView.totalHeight + 50);
 
     finish(monthView.totalHeight + 50);
 
@@ -129,6 +130,7 @@
     LRCMonthView *monthView = [[LRCMonthView alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.frame), 10)];
     monthView.delegate = self;
     monthView.firstDate = self.firDates[indexPath.row];
+    NSLog(@"cell%f",monthView.totalHeight + 50);
     return monthView.totalHeight + 50;
 }
 
@@ -168,10 +170,10 @@
 }
 
 -(LoadView *)aloadView{
-    LoadView *view = [[LoadView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+    LoadView *view = [[LoadView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 600)];
     view.canAutoLoad = YES;
-    view.recoverDelay = 0;
-    view.recoverDuration = 0;
+    view.recoverDelay = 0.01;
+    view.recoverDuration = 0.01;
     return view;
 }
 
