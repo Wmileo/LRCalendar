@@ -10,7 +10,6 @@
 
 @interface LRCDateView ()
 
-@property (nonatomic, strong) UIButton *button;
 
 @end
 
