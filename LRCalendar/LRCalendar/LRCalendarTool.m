@@ -21,6 +21,10 @@
     return [[self calendar] isDate:date1 equalToDate:date2 toUnitGranularity:NSCalendarUnitMonth];
 }
 
++(BOOL)isSameWeekWithDate1:(NSDate *)date1 date2:(NSDate *)date2{
+    return [LRCalendarTool isSameDateWithDate1:[LRCalendarTool firstDateInWeekForDate:date1] date2:[LRCalendarTool firstDateInWeekForDate:date2]];
+}
+
 +(BOOL)isTodayWithDate:(NSDate *)date{
     return [[self calendar] isDateInToday:date];
 }
@@ -66,6 +70,12 @@
 +(NSInteger)weeksCountInMonthForDate:(NSDate *)date{
     NSRange range = [[self calendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:date];
     return range.length;
+}
+
++(NSInteger)weekNumInMonthForDate:(NSDate *)date{
+    NSDate *first = [LRCalendarTool firstDateInWeekForDate:[LRCalendarTool firstDateInMonthForDate:date]];
+    NSInteger days = [LRCalendarTool daysCountFromDate:first toDate:date];
+    return (NSInteger)ceil(days / 7);
 }
 
 +(NSInteger)daysCountInMonthForDate:(NSDate *)date{

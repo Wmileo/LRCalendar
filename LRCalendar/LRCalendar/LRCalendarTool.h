@@ -13,6 +13,7 @@
 +(BOOL)isTodayWithDate:(NSDate *)date;//是否今天
 +(BOOL)isSameDateWithDate1:(NSDate *)date1 date2:(NSDate *)date2;//是否同一天
 +(BOOL)isSameMonthWithDate1:(NSDate *)date1 date2:(NSDate *)date2;//是否同一个月
++(BOOL)isSameWeekWithDate1:(NSDate *)date1 date2:(NSDate *)date2;//是否同一周
 +(BOOL)isDate1:(NSDate *)date1 laterThanDate2:(NSDate *)date2;
 
 +(NSDate *)firstDateInWeekForDate:(NSDate *)date;//date的当前周第一天 （周日）
@@ -25,6 +26,7 @@
 
 +(NSInteger)weeksCountInMonthForDate:(NSDate *)date;//date的当前月的周数
 +(NSInteger)daysCountInMonthForDate:(NSDate *)date;//date的当前月的天数
++(NSInteger)weekNumInMonthForDate:(NSDate *)date;//date的当前月的第几周
 +(NSDateComponents *)dateComponentsWithDate:(NSDate *)date;
 
 //从某天到某天间隔多少天

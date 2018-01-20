@@ -1,5 +1,5 @@
 PODS:
-  - LoadController (2.0.4)
+  - LoadController (2.0.6)
   - Reveal-iOS-SDK (1.6.2)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Reveal-iOS-SDK
 
 SPEC CHECKSUMS:
-  LoadController: 8ee0705e15fe973ff8de189552cd68a8de5b78c0
+  LoadController: e1b4e8a2af3fee2b2a8fff10f7993d69c16f153b
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
 
 PODFILE CHECKSUM: b178360927bc2c6e019495778d2f0e6ea5c034f0
