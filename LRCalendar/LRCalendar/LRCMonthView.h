@@ -25,7 +25,7 @@
 
 @property (nonatomic, strong) NSDate *firstDate;
 
-@property (nonatomic, readonly) NSInteger weekNum;
+@property (nonatomic, assign) NSInteger weekNum; //要展示的周数，默认该月总周数
 @property (nonatomic, readonly) NSDateComponents *firstDateComponents;
 
 @property (nonatomic, readonly) CGFloat totalHeight;
