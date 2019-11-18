@@ -9,7 +9,9 @@
 #import "LRCMonthView.h"
 #import "LRCalendarTool.h"
 
-@interface LRCMonthView ()
+@interface LRCMonthView () {
+    NSInteger _weekNum;
+}
 
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) NSMutableDictionary<NSNumber *, LRCWeekView *> *weekViews;
@@ -56,7 +58,14 @@
 
 #pragma mark - set get
 
+- (void)setWeekNum:(NSInteger)weekNum{
+    _weekNum = weekNum;
+}
+
 -(NSInteger)weekNum{
+    if (_weekNum > 0) {
+        return _weekNum;
+    }
     return [LRCalendarTool weeksCountInMonthForDate:self.firstDate];
 }
 
